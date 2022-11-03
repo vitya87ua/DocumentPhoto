@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05458E22913DF81000D2837 /* AutomaticEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05458E12913DF81000D2837 /* AutomaticEditView.swift */; };
+		D05458E42913DF8E000D2837 /* AutomaticEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05458E32913DF8E000D2837 /* AutomaticEditViewModel.swift */; };
+		D05458E72913ECA4000D2837 /* Extension+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05458E62913ECA4000D2837 /* Extension+CGImage.swift */; };
+		D05458E92913ECC3000D2837 /* Extension+CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05458E82913ECC3000D2837 /* Extension+CGSize.swift */; };
+		D05458EB2914136E000D2837 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05458EA2914136E000D2837 /* Extension+UIImage.swift */; };
 		D06245BE2913CBB30015436C /* DocumentPhotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06245BD2913CBB30015436C /* DocumentPhotoApp.swift */; };
 		D06245C22913CBB40015436C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06245C12913CBB40015436C /* Assets.xcassets */; };
 		D06245C52913CBB40015436C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06245C42913CBB40015436C /* Preview Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D05458E12913DF81000D2837 /* AutomaticEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticEditView.swift; sourceTree = "<group>"; };
+		D05458E32913DF8E000D2837 /* AutomaticEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticEditViewModel.swift; sourceTree = "<group>"; };
+		D05458E62913ECA4000D2837 /* Extension+CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CGImage.swift"; sourceTree = "<group>"; };
+		D05458E82913ECC3000D2837 /* Extension+CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CGSize.swift"; sourceTree = "<group>"; };
+		D05458EA2914136E000D2837 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		D06245BA2913CBB30015436C /* DocumentPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocumentPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06245BD2913CBB30015436C /* DocumentPhotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPhotoApp.swift; sourceTree = "<group>"; };
 		D06245C12913CBB40015436C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D05458E52913DF96000D2837 /* AutomaticEditView */ = {
+			isa = PBXGroup;
+			children = (
+				D05458E12913DF81000D2837 /* AutomaticEditView.swift */,
+				D05458E32913DF8E000D2837 /* AutomaticEditViewModel.swift */,
+			);
+			path = AutomaticEditView;
+			sourceTree = "<group>";
+		};
 		D06245B12913CBB30015436C = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +78,7 @@
 			children = (
 				D06245BD2913CBB30015436C /* DocumentPhotoApp.swift */,
 				D06245CD2913CC060015436C /* MainView */,
+				D05458E52913DF96000D2837 /* AutomaticEditView */,
 				D0DD5F052913D08E000ADD10 /* Extension */,
 				D06245C12913CBB40015436C /* Assets.xcassets */,
 				D06245C32913CBB40015436C /* Preview Content */,
@@ -87,6 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				D0DD5F032913D07F000ADD10 /* Extension+View.swift */,
+				D05458E82913ECC3000D2837 /* Extension+CGSize.swift */,
+				D05458E62913ECA4000D2837 /* Extension+CGImage.swift */,
+				D05458EA2914136E000D2837 /* Extension+UIImage.swift */,
 				D0DD5F062913D3F7000ADD10 /* Log.swift */,
 			);
 			path = Extension;
@@ -163,10 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06245BE2913CBB30015436C /* DocumentPhotoApp.swift in Sources */,
+				D05458EB2914136E000D2837 /* Extension+UIImage.swift in Sources */,
 				D0DD5F072913D3F7000ADD10 /* Log.swift in Sources */,
 				D0DD5F042913D07F000ADD10 /* Extension+View.swift in Sources */,
 				D0DD5F082913D9A9000ADD10 /* MainView.swift in Sources */,
+				D05458E22913DF81000D2837 /* AutomaticEditView.swift in Sources */,
 				D06245CF2913CC300015436C /* MainViewModel.swift in Sources */,
+				D05458E42913DF8E000D2837 /* AutomaticEditViewModel.swift in Sources */,
+				D05458E72913ECA4000D2837 /* Extension+CGImage.swift in Sources */,
+				D05458E92913ECC3000D2837 /* Extension+CGSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

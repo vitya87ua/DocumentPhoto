@@ -10,19 +10,21 @@ import PhotosUI
 
 final class MainViewModel: ObservableObject {
     
-    @Published var selectedImageData: Data? = nil
+    @Published var uiImage: UIImage? = nil
     @Published var selectedItem: PhotosPickerItem? = nil {
         didSet {
             parsePhotosPickerItem(selectedItem)
         }
     }
     
-    func parsePhotosPickerItem(_ item: PhotosPickerItem?) {
+    private func parsePhotosPickerItem(_ item: PhotosPickerItem?) {
         selectedItem?.loadTransferable(type: Data.self) { result in
             switch result {
             case .success(let imageData):
-                DispatchQueue.main.async {
-                    self.selectedImageData = imageData
+                if let imageData {
+                    DispatchQueue.main.async {
+                        self.uiImage = UIImage(data: imageData)
+                    }
                 }
             case .failure(let error):
                 Log(error)

@@ -16,13 +16,30 @@ struct MainView: View {
         NavigationView {
             ZStack {
                 Color.yellow
-                VStack {
+                VStack(spacing: 20) {
                     PhotosPicker(
                         selection: $viewModel.selectedItem,
                         matching: .images,
                         photoLibrary: .shared()
                     ) {
                         userImage
+                    }
+                    
+                    if let uiImage = viewModel.uiImage {
+                        NavigationLink {
+                            AutomaticEditView(
+                                viewModel: AutomaticEditViewModel(
+                                    uiImage: uiImage
+                                )
+                            )
+                        } label: {
+                            Text("NEXT")
+                                .foregroundColor(.white)
+                                .padding(.horizontal)
+                                .padding(.vertical, 4)
+                                .background(Color.black)
+                                .cornerRadius(5)
+                        }
                     }
                 }
             }
@@ -33,10 +50,10 @@ struct MainView: View {
     
     @ViewBuilder
     var userImage: some View {
-        if let data = viewModel.selectedImageData,
-           let uiImage = UIImage(data: data) {
+        if let uiImage = viewModel.uiImage {
             Image(uiImage: uiImage)
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .equalFrame(300)
         } else {
             VStack {

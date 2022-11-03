@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct DocumentPhotoApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             MainView()
