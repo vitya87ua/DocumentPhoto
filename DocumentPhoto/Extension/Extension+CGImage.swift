@@ -227,4 +227,23 @@ extension CGImage {
         
         return context?.makeImage()
     }
+    
+    func blur(radius: CGFloat) -> CGImage? {
+        
+        let ciContext = CIContext(options: nil)
+        
+        let inputImage = CIImage(cgImage: self)
+        
+        guard let ciFilter = CIFilter(name: "CIGaussianBlur") else { return nil }
+        
+        ciFilter.setValue(inputImage, forKey: kCIInputImageKey)
+        ciFilter.setValue(radius, forKey: "inputRadius")
+        
+        guard
+            let resultImage = ciFilter.value(forKey: kCIOutputImageKey) as? CIImage,
+            let cgImage = ciContext.createCGImage(resultImage, from: inputImage.extent)
+        else { return nil }
+        
+        return cgImage
+    }
 }

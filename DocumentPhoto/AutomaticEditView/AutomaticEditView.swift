@@ -15,6 +15,7 @@ struct AutomaticEditView: View {
         ZStack {
             VStack(spacing: 20) {
                 Image(uiImage: viewModel.uiImage)
+//                Image(uiImage: UIImage(cgImage: (UIImage(named: "port")!.cgImage?.overlayRects([.init(center: CGPoint(x: 100, y: 100), size: .init(width: 20, height: 30))]))!))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
